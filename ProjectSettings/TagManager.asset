@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Shell
   - EnemyShell
+  - Fire
+  - EnemyShotShell
   layers:
   - Default
   - TransparentFX
