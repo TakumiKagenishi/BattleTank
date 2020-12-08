@@ -13,6 +13,8 @@ public class CameraController : MonoBehaviour
     private AudioListener mainListener;
     [SerializeField]
     private AudioListener FPSListener;
+    [SerializeField]
+    private GameObject aimImage;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class CameraController : MonoBehaviour
         FPSCamera.enabled = false;
         mainListener.enabled = true;
         FPSListener.enabled = false;
+        aimImage.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,6 +35,7 @@ public class CameraController : MonoBehaviour
             mainCameraON = false;
             mainListener.enabled = false;
             FPSListener.enabled = true;
+            aimImage.SetActive(true);
         }
         else if(Input.GetKeyDown(KeyCode.C) && mainCameraON == false)
         {
@@ -40,6 +44,7 @@ public class CameraController : MonoBehaviour
             mainCameraON = true;
             mainListener.enabled = true;
             FPSListener.enabled = false;
+            aimImage.SetActive(false);
         }
     }
 }
