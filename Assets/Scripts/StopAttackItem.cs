@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StopAttackItem : MonoBehaviour
+public class StopAttackItem : MonoBehaviour 
 {
     private GameObject[] targets;
     [SerializeField]
