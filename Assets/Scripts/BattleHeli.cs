@@ -18,13 +18,13 @@ public class BattleHeli : MonoBehaviour
     void Update()
     {
         transform.LookAt(target.transform);
-        if(Vector3.Distance(transform.position, target.transform.position) > 10f)
+        if(Vector3.Distance(transform.position, target.transform.position) > 8f)
         {
             transform.Translate(Vector3.forward * Time.deltaTime * 3);
         }
         else
         {
-            if(transform.position.y < 8f)
+            if(transform.position.y < 6f)
             {
                 transform.Translate(Vector3.up * Time.deltaTime * 3);
             }

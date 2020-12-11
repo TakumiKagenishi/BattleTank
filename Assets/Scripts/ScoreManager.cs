@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -23,6 +24,13 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(score == 30)
+        {
+            Invoke("GoToGameClear", 1.5f);
+        }
+    }
+    void GoToGameClear()
+    {
+        SceneManager.LoadScene("GameClear");
     }
 }

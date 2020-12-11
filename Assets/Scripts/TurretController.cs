@@ -21,9 +21,9 @@ public class TurretController : MonoBehaviour
             audioS.enabled = true;
             angle.x -= 0.5f;
             transform.eulerAngles = new Vector3(angle.x, transform.root.eulerAngles.y, 0);
-            if(angle.x < 70)
+            if(angle.x < 50)
             {
-                angle.x = 70;
+                angle.x = 50;
             }
         }
         else if(Input.GetKey(KeyCode.L))
